@@ -41,31 +41,29 @@
     
 <script>
 function spawnStars(count) {
-        const wrapper = document.querySelector(".wrapper");
+        const wrapper = document.querySelector(".wrapper")
         if (!wrapper) {
-            console.error("Wrapper not found!");
-            return;
+            alert("Wrapper not found!")
+            return
         }
         
-        console.log("Spawning stars...");
-        
         for (let i = 0; i < count; i++) {
-            let star = document.createElement("div");
-            star.classList.add("star");
+            let star = document.createElement("div")
+            star.classList.add("star")
 
-            let x = Math.random() * wrapper.clientWidth;
-            let y = Math.random() * wrapper.clientHeight;
+            let x = Math.random() * wrapper.clientWidth
+            let y = Math.random() * wrapper.clientHeight
 
-            console.log(`Star ${i + 1}: x=${x}, y=${y}`);
+            console.log(`Star ${i + 1}: x=${x}, y=${y}`)
 
-            star.style.left = `${x}px`;
-            star.style.top = `${y}px`;
+            star.style.left = `${x}px`
+            star.style.top = `${y}px`
 
-            wrapper.appendChild(star);
+            wrapper.appendChild(star)
         }
     }
 
-    spawnStars(150);
+    spawnStars(150)
 </script>
 </body>
 </html>
